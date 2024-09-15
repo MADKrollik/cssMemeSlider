@@ -144,3 +144,34 @@ main {
       opacity: 1;
     }
   }
+
+  .control__label:hover {
+    background-color: #fff;
+  }
+
+  .control__label:active {
+    transform: scale(1.2);
+  }
+
+  .control__input:checked + .control__label .control__button {
+    background-color: #000;
+  }
+
+  @media (max-width: 780px) {
+    .slider__caption {
+      width: 100%;
+      order: 1;
+    }
+
+    .slider__control {
+      justify-content: center;
+      width: 100%;
+      margin-top: 2rem;
+    }
+  }
+
+  @media (max-width: 320px) {
+    * {
+      font-size: 8px;
+    }
+  }
