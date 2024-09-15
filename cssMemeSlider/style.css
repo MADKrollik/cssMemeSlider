@@ -1,0 +1,177 @@
+* {
+    font-size: 13px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Play', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+    background-color: #000;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 80%;
+    max-width: 60rem;
+    overflow: hidden;
+}
+
+.slider__card {
+    width: 100%;
+    height:auto;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.cards {
+    display: flex;
+    width: 400%;
+    transition: 0.3s ease-in-out;
+}
+
+.card {
+    width: 25%;
+    height: auto;
+}
+
+.slider__caption {
+    width: 70%;
+    height: auto;
+    overflow: hidden;
+}
+
+.captions {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 400%;
+    transition: 0.3s ease-in-out;
+}
+
+.caption {
+    width: 25%;
+    padding-left: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.slider__control {
+    display: flex;
+    justify-content: flex-end;
+    width: 30%;
+}
+
+.control__input {
+    display: none;
+}
+
+.control__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    padding: 0.5rem;
+    margin: 0 0.25rem;
+    border-radius: 50%;
+    background-color: #41a9f1;
+    background-clip: content-box;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.control__button {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+}
+
+.slider:has(#card-1:checked) .cards,
+.slider:has(#card-1:checked) .captions {
+  transform: translateX(0);
+}
+
+.slider:has(#card-2:checked) .cards,
+.slider:has(#card-2:checked) .captions {
+  transform: translateX(-25%);
+}
+
+.slider:has(#card-3:checked) .cards,
+.slider:has(#card-3:checked) .captions {
+  transform: translateX(-50%);
+}
+
+.slider:has(#card-4:checked) .cards,
+.slider:has(#card-4:checked) .captions {
+  transform: translateX(-75%);
+}
+
+.slider:has(#card-1:checked) .caption:nth-child(1),
+.slider:has(#card-2:checked) .caption:nth-child(2),
+.slider:has(#card-3:checked) .caption:nth-child(3),
+.slider:has(#card-4:checked) .caption:nth-child(4) {
+  animation: fadeIn 0.3s forwards;
+  animation-delay: 0.2s;
+}
+
+.slider:has(#card-1:checked) .caption,
+.slider:has(#card-2:checked) .caption,
+.slider:has(#card-3:checked) .caption,
+.slider:has(#card-4:checked) .caption {
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .control__label:hover {
+    background-color: #fff;
+  }
+
+  .control__label:active {
+    transform: scale(1.2);
+  }
+
+  .control__input:checked + .control__label .control__button {
+    background-color: #000;
+  }
+
+  @media (max-width: 780px) {
+    .slider__caption {
+      width: 100%;
+      order: 1;
+    }
+
+    .slider__control {
+      justify-content: center;
+      width: 100%;
+      margin-top: 2rem;
+    }
+  }
+
+  @media (max-width: 320px) {
+    * {
+      font-size: 8px;
+    }
+  }

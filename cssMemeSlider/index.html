@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <title>CSS Meme Slider</title>
+  </head>
+  <body>
+    <main>
+    <div class="slider">
+        <div class="slider__card">
+          <div class="cards">
+            <img class="card" src="./images/mem-01.jpg" alt="first card" />
+
+            <img class="card" src="./images/mem-02.jpg" alt="second card" />
+
+            <img class="card" src="./images/mem-03.jpg" alt="third card" />
+
+            <img class="card" src="./images/mem-04.jpg" alt="fourth card" />
+          </div>
+        </div>
+        <div class="slider__caption">
+          <div class="captions">
+            <p class="caption">Facepalm!</p>
+            <p class="caption">Working as creatively intended!</p>
+            <p class="caption">Or four...!</p>
+            <p class="caption">Oopsie!</p>
+          </div>
+        </div>
+        <div class="slider__control">
+            <input
+            class="control__input"
+            type="radio"
+            name="radio-button"
+            id="card-1"
+            checked
+          />
+          <label class="control__label" for="card-1">
+            <span class="control__button"></span>
+          </label>
+
+          <input
+            class="control__input"
+            type="radio"
+            name="radio-button"
+            id="card-2"
+          />
+          <label class="control__label" for="card-2">
+            <span class="control__button"></span>
+          </label>
+
+          <input
+            class="control__input"
+            type="radio"
+            name="radio-button"
+            id="card-3"
+          />
+          <label class="control__label" for="card-3">
+            <span class="control__button"></span>
+          </label>
+
+          <input
+            class="control__input"
+            type="radio"
+            name="radio-button"
+            id="card-4"
+          />
+          <label class="control__label" for="card-4">
+            <span class="control__button"></span>
+          </label>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
