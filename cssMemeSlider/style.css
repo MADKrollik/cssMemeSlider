@@ -100,3 +100,47 @@ main {
     height: 1.5rem;
     border-radius: 50%;
 }
+
+.slider:has(#card-1:checked) .cards,
+.slider:has(#card-1:checked) .captions {
+  transform: translateX(0);
+}
+
+.slider:has(#card-2:checked) .cards,
+.slider:has(#card-2:checked) .captions {
+  transform: translateX(-25%);
+}
+
+.slider:has(#card-3:checked) .cards,
+.slider:has(#card-3:checked) .captions {
+  transform: translateX(-50%);
+}
+
+.slider:has(#card-4:checked) .cards,
+.slider:has(#card-4:checked) .captions {
+  transform: translateX(-75%);
+}
+
+.slider:has(#card-1:checked) .caption:nth-child(1),
+.slider:has(#card-2:checked) .caption:nth-child(2),
+.slider:has(#card-3:checked) .caption:nth-child(3),
+.slider:has(#card-4:checked) .caption:nth-child(4) {
+  animation: fadeIn 0.3s forwards;
+  animation-delay: 0.2s;
+}
+
+.slider:has(#card-1:checked) .caption,
+.slider:has(#card-2:checked) .caption,
+.slider:has(#card-3:checked) .caption,
+.slider:has(#card-4:checked) .caption {
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
