@@ -15,23 +15,66 @@
   </head>
   <body>
     <main>
-      <div class="slider">
+    <div class="slider">
         <div class="slider__card">
-          <div class="cards"></div>
+          <div class="cards">
+            <img class="card" src="./images/mem-01.jpg" alt="first card" />
+
+            <img class="card" src="./images/mem-02.jpg" alt="second card" />
+
+            <img class="card" src="./images/mem-03.jpg" alt="third card" />
+
+            <img class="card" src="./images/mem-04.jpg" alt="fourth card" />
+          </div>
         </div>
         <div class="slider__caption">
-          <div class="captions"></div>
+          <div class="captions">
+            <p class="caption">Facepalm!</p>
+            <p class="caption">Working as creatively intended!</p>
+            <p class="caption">Or four...!</p>
+            <p class="caption">Oopsie!</p>
+          </div>
         </div>
         <div class="slider__control">
+            <input
+            class="control__input"
+            type="radio"
+            name="radio-button"
+            id="card-1"
+            checked
+          />
+          <label class="control__label" for="card-1">
+            <span class="control__button"></span>
+          </label>
+
           <input
             class="control__input"
             type="radio"
-            name=""
-            id=""
-            checked
+            name="radio-button"
+            id="card-2"
           />
-          <label class="" for="">
-            <span class=""></span>
+          <label class="control__label" for="card-2">
+            <span class="control__button"></span>
+          </label>
+
+          <input
+            class="control__input"
+            type="radio"
+            name="radio-button"
+            id="card-3"
+          />
+          <label class="control__label" for="card-3">
+            <span class="control__button"></span>
+          </label>
+
+          <input
+            class="control__input"
+            type="radio"
+            name="radio-button"
+            id="card-4"
+          />
+          <label class="control__label" for="card-4">
+            <span class="control__button"></span>
           </label>
         </div>
       </div>
